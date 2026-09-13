@@ -92,11 +92,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable bandwidth-nc.service
 sudo systemctl start bandwidth-nc.service
 ```
-Printout
-```ini
-WAN Down: 0.19 MB/s | Up: 0.18 MB/s
-LAN Down: 0.20 MB/s | Up: 0.21 MB/s
-```
 
 ### LAN
 Remember to check proper eth names to use
@@ -187,13 +182,19 @@ ${color lightgrey}Heimdall:${color2} ${alignr} ${texecpi 3 nc -w 1 192.168.10.1 
 ${color lightgrey}Heimdall:${color2} ${alignr} ${texecpi 3 nc -w 1 192.168.10.1 7070 | awk 'NF{print;c=1} END{if(!c) print "${color7}Offline"}'}
 ${color white}$hr
 ```
-Printout
+  
+Port 7071 is to read wan from router  
+Port 7070 is used for lan on router and other devices lan bandwith monitor is used  
+  
+### Printout WAN / LAN
 ```ini
+WAN Down: 0.19 MB/s | Up: 0.18 MB/s
 LAN Down: 0.20 MB/s | Up: 0.21 MB/s
 ```
-7071 is to read wan from router
-7070 is used for all lan devices and lan from router too when added to a linux host
-
+### Printout LAN
+```ini
+LAN Down: 0.15 MB/s | Up: 0.16 MB/s
+```
 ---
 
 ## 📄 License
