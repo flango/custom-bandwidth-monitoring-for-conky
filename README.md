@@ -92,6 +92,11 @@ sudo systemctl daemon-reload
 sudo systemctl enable bandwidth-nc.service
 sudo systemctl start bandwidth-nc.service
 ```
+Printout
+```ini
+WAN Down: 0.19 MB/s | Up: 0.18 MB/s
+LAN Down: 0.20 MB/s | Up: 0.21 MB/s
+```
 
 ### LAN
 Remember to check proper eth names to use
@@ -184,7 +189,6 @@ ${color white}$hr
 ```
 Printout
 ```ini
-WAN Down: 0.19 MB/s | Up: 0.18 MB/s
 LAN Down: 0.20 MB/s | Up: 0.21 MB/s
 ```
 7071 is to read wan from router
